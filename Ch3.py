@@ -29,12 +29,12 @@ y = forward(network, x)
 print(y)
 
 
-# 3.5.1 softmax
+# 3.5.2 softmax considering overflow 'c'
 def softmax(a):
-    exp_a = np.exp(a)
+    c = np.max(a)
+    exp_a = np.exp(a-c) # overflow resolution
     sum_exp_a = np.sum(exp_a)
     y = exp_a / sum_exp_a
     
     return y
-    
-    
+        
