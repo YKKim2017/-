@@ -8,7 +8,7 @@ def init_network():
     network['W3'] = np.array([[0.1, 0.3], [0.2, 0.4]])
     network['b3'] = np.array([0.1, 0.2])
     
-    retuen network
+    return network
     
 def forward(network, x):
     W1, W2, W3 = network['W1'], network['W2'], network['W3']
